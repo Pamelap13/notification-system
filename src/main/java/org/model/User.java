@@ -11,6 +11,9 @@ public class User {
         this.name = name;
         this.email = email;
         this.active = active;
+        if (email == null){
+            throw new IllegalArgumentException("Email cannot be null");
+        }
     }
 
     public Long getId() {
