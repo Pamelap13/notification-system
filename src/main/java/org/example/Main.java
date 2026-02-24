@@ -7,9 +7,7 @@ import org.service.NotificationChanel;
 import org.service.NotificationService;
 import org.service.PushNotification;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -20,8 +18,8 @@ public class Main {
         Set<NotificationChanel> channels = new HashSet<>();
         channels.add(new EmailNotification());
         channels.add(new PushNotification());
+        //Envio de notificaciones
         NotificationService service = new NotificationService();
-        service.notify(user,"Welcome", channels);
+        service.notify(user, "Welcome", channels);
     }
-
 }
